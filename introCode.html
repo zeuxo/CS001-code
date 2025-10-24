@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archipelago</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Permanent+Marker&family=Roboto+Slab:wght@100..900&family=Rubik+Wet+Paint&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Rubik+Wet+Paint&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Rubik+Wet+Paint&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+html{
+    background-color: #1D2731;
+}
+.links-left a{
+    color: #fff;
+    text-decoration: none;
+    font-family: "Baskervville", serif;
+    padding-left: 80px;
+    margin-top: 8px;
+    display: inline-block;
+}
+.links-right a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    font-family: "Baskervville", serif;
+    padding-right: 75px;
+    margin-top: 8px;
+    display: inline-block;
+}
+.logo{
+    margin-top: 10px;
+}
+.Background {
+    background-image: url('firstBG.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 42rem;  
+    position: absolute; 
+    top: 6rem;
+    left: 0;
+    z-index: -1; 
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10 px 10 px;
+}
+.logo-second img{
+    margin-left: 43rem;
+    margin-top: 10rem;
+}
+.name{
+    color: #fff;
+    font-family: "Playfair Display", serif;
+    font-size: 8rem;
+    margin-left: 26rem;
+}
+.main p{
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    margin-left: 36rem;
+}
+.button button {
+    color: #fff;
+    background-color: #1D2731;
+    font-size: 20px;
+    padding: 20px 53px;  
+    width: auto;       
+    height: auto;       
+    border: none;        
+    display: inline-block;
+    cursor: pointer;  
+    font-family: "Montserrat", sans-serif;  
+    border-radius: 10px;
+    margin-left: 39rem;
+    margin-top: 1.5rem;
+}
+.links-left a:hover {
+    color: #4ac5cb; 
+    background-color: transparent; 
+    text-decoration: underline; 
+}
+.links-right a:hover {
+    color: #4ac5cb; 
+    background-color: transparent; 
+    text-decoration: underline; 
+}
+.section-two {
+    background-color: #2B4257;
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 20px;
+    margin-top: 2.5rem;
+    height: 32rem;
+
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+.logo-third img{
+    margin-top: -15rem;
+    margin-left: -50rem;
+}
+.About{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    margin-left: 50rem;
+}
+
+.About::before,
+.About::after {
+    content: "";
+    display: inline-block;
+    width: 10rem;
+    border-bottom: 2px solid #ffffff;
+    margin: 0 20px; 
+}
+.name-two{
+    color: #fff;
+    font-family: "Playfair Display", serif;
+    font-size: 7rem;
+    margin-left: 49rem;
+    margin-top: -2rem;
+}
+.second-wrapper {
+    background-image: url('bg img 2.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 20rem;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+    padding: 5rem 0;
+}
+.content p{
+    color: #fff;
+}
+.logo-forth .content {
+    position: relative;
+    text-align: center;
+    margin-left: 3rem;
+    top: -3rem;
+    left: 0;
+}
+.first{
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+}
+.second{
+    font-size: 2.5rem;
+    font-family: "Playfair Display", serif;
+}
+.third{
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+}
+</style>
+</head>
+<body>
+    <div class="wrapper">
+            <!--main content-->
+            <div class="header">
+                <div class="links-left">
+                    <a href="">Home</a>
+                    <a href="">About</a>
+                    <a href="">Reservation</a>
+                </div><!--linksL-->
+                        <div class="logo">
+                            <img src="C:\Users\Laptop Supplier PH\Downloads\Code\HTML, CSS, JavaScript\A - intro code\Logo.png">
+                        </div><!--logo-->
+                <div class="links-right">
+                    <a href="">Delivery</a>
+                    <a href="">Menu</a>
+                    <a href="">Contact</a>
+                </div><!--linksR-->
+                <div class="Background"></div><!--background-->
+            </div><!--header-->
+            <div class="main">
+                <div class="logo-second">
+                    <img src="C:\Users\Laptop Supplier PH\Downloads\Code\HTML, CSS, JavaScript\A - intro code\Bigger logo.png">
+                </div><!--logo-->
+                <div class="name">Archipelago</div><!--name-->
+                <p>A Journey Through Southeast Asia</p>
+            </div><!--main-->
+            <div class="button">
+                <button>Reserve Now</button>
+            </div>
+    </div>
+    <div class="section-two">
+        <div class="About">
+            <span>About</span>
+        </div>
+        <div class="name-two">Archipelago</div><!--name-->
+        <div class="logo-third">
+            <img src="C:\Users\Laptop Supplier PH\Downloads\Code\HTML, CSS, JavaScript\A - intro code\chef img.png">
+        </div>
+    </div>
+    <div class="second-wrapper">
+        <div class="section-three">
+            <div class="logo-forth">
+                <div class="content">
+                    <p class="first">A FEAST OF FLAVORS</p>
+                    <p class="second">ACROSS SOUTHEAST ASIA</p>
+                    <p class="third">Step into The Archipelago, where every dish tells the story of islands<br>
+                    bound by flavor and tradition. Experience the warmt of Southeast<br>
+                Asian hospitality through vibrant spices, fragrant herbs, and time-<br>
+            honored recipes reimagined with modern elegance.</p>
+            </div>
+        </div>
+    </div>
+   </div>
+</body>
