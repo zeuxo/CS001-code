@@ -1,350 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Archipelago</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Permanent+Marker&family=Roboto+Slab:wght@100..900&family=Rubik+Wet+Paint&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Rubik+Wet+Paint&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Rubik+Wet+Paint&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baskervville+SC:wght@400..700&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Rubik+Wet+Paint&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
-    <style>
-        html {
-            background-color: #1D2731;
-        }
-        .links-left a, .links-right a {
-            color: #fff;
-            text-decoration: none;
-            font-family: "Baskervville", serif;
-            margin-top: 8px;
-            display: inline-block;
-        }
-        .links-left a {
-            padding-left: 80px;
-        }
-        .links-right a {
-            padding: 10px;
-            padding-right: 75px;
-        }
-        .logo {
-            margin-top: 10px;
-        }
-        .Background {
-            background-image: url('images/firstBG.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            width: 100%;
-            height: 42rem;
-            position: absolute;
-            top: 6rem;
-            left: 0;
-            z-index: -1;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 10px;
-        }
-        .logo-second img {
-            margin-left: 43rem;
-            margin-top: 10rem;
-        }
-        .name {
-            color: #fff;
-            font-family: "Playfair Display", serif;
-            font-size: 8rem;
-            margin-left: 26rem;
-        }
-        .main p {
-            color: #fff;
-            font-family: "Montserrat", sans-serif;
-            font-size: 20px;
-            margin-left: 36rem;
-        }
-        .button button {
-            color: #fff;
-            background-color: #1D2731;
-            font-size: 20px;
-            padding: 20px 53px;
-            border: none;
-            display: inline-block;
-            cursor: pointer;
-            font-family: "Montserrat", sans-serif;
-            border-radius: 10px;
-            margin-left: 39rem;
-            margin-top: 1.5rem;
-        }
-        .links-left a:hover,
-        .links-right a:hover {
-            color: #4ac5cb;
-            text-decoration: underline;
-        }
-        .section-two {
-            background-color: #2B4257;
-            color: #ffffff;
-            text-align: center;
-            padding: 100px 20px;
-            margin-top: 2.5rem;
-            height: 32rem;
-            width: 100vw;
-            position: relative;
-            left: 50%;
-            right: 50%;
-            margin-left: -50vw;
-            margin-right: -50vw;
-        }
-        .logo-third img {
-            margin-top: -15rem;
-            margin-left: -50rem;
-        }
-        .About {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ffffff;
-            font-family: "Montserrat", sans-serif;
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            margin-left: 50rem;
-        }
-        .About::before,
-        .About::after {
-            content: "";
-            display: inline-block;
-            width: 10rem;
-            border-bottom: 2px solid #ffffff;
-            margin: 0 20px;
-        }
-        .name-two {
-            color: #fff;
-            font-family: "Playfair Display", serif;
-            font-size: 7rem;
-            margin-left: 49rem;
-            margin-top: -2rem;
-        }
-        .second-wrapper {
-            background-image: url('images/bg img 2.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            width: 100vw;
-            height: 20rem;
-            position: relative;
-            left: 50%;
-            margin-left: -50vw;
-            padding: 5rem 0;
-        }
-        .content p {
-            color: #fff;
-        }
-        .logo-forth .content {
-            position: relative;
-            text-align: center;
-            margin-left: 3rem;
-            top: -3rem;
-        }
-        .first {
-            font-size: 1.5rem;
-            font-family: "Montserrat", sans-serif;
-        }
-        .second {
-            font-size: 2.5rem;
-            font-family: "Playfair Display", serif;
-        }
-        .third {
-            font-size: 1.5rem;
-            font-family: "Montserrat", sans-serif;
-        }
-        .third-wrapper {
-           background-color: #1D2731;  
-           color: #ffffff;
-           text-align: center;
-           padding: 100px 20px;
-           height: 25rem;              
-           width: 100vw;
-           position: relative;
-           left: 50%;
-           margin-left: -50vw;
-        }
-        .button-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 3rem; 
-            margin-top: 3rem;
-        }
-        .top-row,
-        .bottom-row {
-           display: flex;
-           justify-content: center;
-           gap: 4rem; 
-        }
-        .image-button {
-            position: relative;
-            background-color: transparent;
-            border: none;
-            border-radius: 15px;
-            width: 700px;
-            height: 500px;
-            cursor: pointer;
-            overflow: hidden;
-            transition: transform 0.2s ease-in-out;
-        }
-        .image-button img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 15px;
-            filter: brightness(70%);
-            transition: filter 0.3s;
-        }
-        .image-button span {
-            position: absolute;
-            top: 90%;
-            left: 53%;
-            transform: translate(-50%, -50%);
-            font-family: "Baskervville SC", serif;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #ffffff;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.6);
-            pointer-events: none;
-        }
-        .top-row span::before,
-        .top-row span::after {
-            content: "";
-            display: inline-block;
-            width: 3rem;
-            border-bottom: 2px solid #ffffff;
-            margin: 0 20px;
-        }
-        .bottom-row span::before,
-        .bottom-row span::after {
-            content: "";
-            display: inline-block;
-            width: 4rem;
-            border-bottom: 2px solid #ffffff;
-            margin: 0 20px;
-        }
-        .image-button:hover {
-            transform: scale(1.05);
-        }
-        .image-button:hover img {
-            filter: brightness(100%);
-        }
-        .Discover{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ffffff;
-            font-family: "Montserrat", sans-serif;
-            font-size: 1.3rem;
-            margin-bottom: 0.2rem;
-            margin-left: 0.5rem;
-        }
-        .Discover::before,
-        .Discover::after {
-            content: "";
-            display: inline-block;
-            width: 10rem;
-            border-bottom: 2px solid #ffffff;
-            margin: 0 20px;
-        }
-        .Menu {
-            font-size: 4rem;
-            font-family: "Playfair Display", serif;
-            margin-bottom: 0.5rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Archipelago</title>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baskervville+SC:wght@400..700&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Rubik+Wet+Paint&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet" />
+  <style>
+    html {
+      background-color: #1D2731;
+      scroll-behavior: smooth;
+    }
+    .links-left a,
+    .links-right a {
+      color: #fff;
+      text-decoration: none;
+      font-family: "Baskervville", serif;
+      margin-top: 8px;
+      display: inline-block;
+    }
+    .links-left a {
+      padding-left: 80px;
+    }
+    .links-right a {
+      padding: 10px;
+      padding-right: 75px;
+    }
+    .logo {
+      margin-top: 10px;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 10px;
+    }
+    .links-left a:hover,
+    .links-right a:hover {
+      color: #4ac5cb;
+      text-decoration: underline;
+    }
+    .Background {
+      background-image: url('images/firstBG.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 42rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .logo-second img {
+      margin-left: 43rem;
+      margin-top: 10rem;
+    }
+    .name {
+      color: #fff;
+      font-family: "Playfair Display", serif;
+      font-size: 8rem;
+      margin-left: 26rem;
+    }
+    .main p {
+      color: #fff;
+      font-family: "Montserrat", sans-serif;
+      font-size: 20px;
+      margin-left: 36rem;
+    }
+    .button button {
+      color: #fff;
+      background-color: #1D2731;
+      font-size: 20px;
+      padding: 20px 53px;
+      border: none;
+      display: inline-block;
+      cursor: pointer;
+      font-family: "Montserrat", sans-serif;
+      border-radius: 10px;
+      margin-left: 39rem;
+      margin-top: 1.5rem;
+      transition: 0.3s ease;
+    }
+    .button button:hover {
+      background-color: #2b4257;
+    }
+    .section-two {
+      background-color: #2B4257;
+      color: #ffffff;
+      text-align: center;
+      padding: 100px 20px;
+      margin-top: 42rem;
+      width: 100%;
+    }
+    .logo-third img {
+      margin-top: -15rem;
+      margin-left: -50rem;
+    }
+    .About {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .About::before,
+    .About::after {
+      content: "";
+      display: inline-block;
+      width: 10rem;
+      border-bottom: 2px solid #ffffff;
+      margin: 0 20px;
+    }
+    .name-two {
+      color: #fff;
+      font-family: "Playfair Display", serif;
+      font-size: 7rem;
+      margin-top: -2rem;
+    }
+    .second-wrapper {
+      background-image: url('images/bg img 2.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      padding: 5rem 0;
+    }
+    .content {
+      text-align: center;
+      color: #fff;
+    }
+    .first {
+      font-size: 1.5rem;
+      font-family: "Montserrat", sans-serif;
+    }
+    .second {
+      font-size: 2.5rem;
+      font-family: "Playfair Display", serif;
+    }
+    .third {
+      font-size: 1.5rem;
+      font-family: "Montserrat", sans-serif;
+    }
+    .third-wrapper {
+      background-color: #1D2731;
+      color: #ffffff;
+      text-align: center;
+      padding: 100px 20px;
+      width: 100%;
+    }
+    .Discover {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-family: "Montserrat", sans-serif;
+      font-size: 1.3rem;
+      margin-bottom: 0.2rem;
+    }
+    .Discover::before,
+    .Discover::after {
+      content: "";
+      display: inline-block;
+      width: 10rem;
+      border-bottom: 2px solid #ffffff;
+      margin: 0 20px;
+    }
+    .Menu {
+      font-size: 4rem;
+      font-family: "Playfair Display", serif;
+      margin-bottom: 1rem;
+    }
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+    .top-row,
+    .bottom-row {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+    }
+    .image-button {
+      position: relative;
+      background-color: transparent;
+      border: none;
+      border-radius: 15px;
+      width: 350px;
+      height: 250px;
+      cursor: pointer;
+      overflow: hidden;
+      transition: transform 0.2s ease-in-out;
+    }
+    .image-button img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+      filter: brightness(70%);
+      transition: filter 0.3s;
+    }
+    .image-button span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: "Baskervville SC", serif;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ffffff;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+      pointer-events: none;
+    }
+    .image-button:hover {
+      transform: scale(1.05);
+    }
+    .image-button:hover img {
+      filter: brightness(100%);
+    }
+  </style>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="header">
-            <div class="links-left">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Reservation</a>
-            </div>
-            <div class="logo">
-                <img src="images/Logo.png" alt="Logo">
-            </div>
-            <div class="links-right">
-                <a href="#">Delivery</a>
-                <a href="#">Menu</a>
-                <a href="#">Contact</a>
-            </div>
-        </div>
-        <div class="Background"></div>
-        <div class="main">
-            <div class="logo-second">
-                <img src="images/Bigger logo.png" alt="Bigger Logo">
-            </div>
-            <div class="name">Archipelago</div>
-            <p>A Journey Through Southeast Asia</p>
-        </div>
-
-        <div class="button">
-            <button>Reserve Now</button>
-        </div>
+  <div class="wrapper">
+    <div class="header">
+      <div class="links-left">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Reservation</a>
+      </div>
+      <div class="logo">
+        <img src="images/Logo.png" alt="Logo" />
+      </div>
+      <div class="links-right">
+        <a href="#">Delivery</a>
+        <a href="#">Menu</a>
+        <a href="#">Contact</a>
+      </div>
     </div>
-    <div class="section-two">
-        <div class="About"><span>About</span></div>
-        <div class="name-two">Archipelago</div>
-        <div class="logo-third">
-            <img src="images/chef img.png" alt="Chef">
-        </div>
+    <div class="Background"></div>
+    <div class="main">
+      <div class="logo-second">
+        <img src="images/Bigger logo.png" alt="Bigger Logo" />
+      </div>
+      <div class="name">Archipelago</div>
+      <p>A Journey Through Southeast Asia</p>
     </div>
-    <div class="second-wrapper">
-        <div class="section-three">
-            <div class="logo-forth">
-                <div class="content">
-                    <p class="first">A FEAST OF FLAVORS</p>
-                    <p class="second">ACROSS SOUTHEAST ASIA</p>
-                    <p class="third">
-                        Step into The Archipelago, where every dish tells the story of islands<br>
-                        bound by flavor and tradition. Experience the warmth of Southeast<br>
-                        Asian hospitality through vibrant spices, fragrant herbs, and time-<br>
-                        honored recipes reimagined with modern elegance.
-                    </p>
-                </div>
-            </div>
-        </div>
+    <div class="button">
+      <button>Reserve Now</button>
     </div>
-    <div class="third-wrapper">
-        <div class="Discover"><span>Discover</span></div>
-        <div class="Menu">Our Menu</div> 
-        <div class="button-container">
-          <div class="top-row">
-            <button class="image-button">
-              <img src="images/Main course.png" alt="Main Course">
-              <span>Main Course</span>
-            </button>
-            <button class="image-button">
-              <img src="images/Appetizer.png" alt="Appetizer">
-              <span>Appetizer</span>
-            </button>
-          </div>
-          <div class="bottom-row">
-            <button class="image-button">
-              <img src="images/Wine.png" alt="Wine">
-              <span>Wine</span>
-            </button>
-            <button class="image-button">
-              <img src="images/Desserts.png" alt="Desserts">
-              <span>Desserts</span>
-            </button>
-          </div>
+  </div>
+  <div class="section-two">
+    <div class="About"><span>About</span></div>
+    <div class="name-two">Archipelago</div>
+    <div class="logo-third">
+      <img src="images/chef img.png" alt="Chef" />
+    </div>
+  </div>
+  <div class="second-wrapper">
+    <div class="section-three">
+      <div class="logo-forth">
+        <div class="content">
+          <p class="first">A FEAST OF FLAVORS</p>
+          <p class="second">ACROSS SOUTHEAST ASIA</p>
+          <p class="third">
+            Step into The Archipelago, where every dish tells the story of
+            islands<br />
+            bound by flavor and tradition. Experience the warmth of Southeast<br />
+            Asian hospitality through vibrant spices, fragrant herbs, and
+            time-<br />
+            honored recipes reimagined with modern elegance.
+          </p>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="third-wrapper">
+    <div class="Discover"><span>Discover</span></div>
+    <div class="Menu">Our Menu</div>
+    <div class="button-container">
+      <div class="top-row">
+        <button class="image-button">
+          <img src="images/Main course.png" alt="Main Course" />
+          <span>Main Course</span>
+        </button>
+        <button class="image-button">
+          <img src="images/Appetizer.png" alt="Appetizer" />
+          <span>Appetizer</span>
+        </button>
+      </div>
+      <div class="bottom-row">
+        <button class="image-button">
+          <img src="images/Wine.png" alt="Wine" />
+          <span>Wine</span>
+        </button>
+        <button class="image-button">
+          <img src="images/Desserts.png" alt="Desserts" />
+          <span>Desserts</span>
+        </button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
