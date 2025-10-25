@@ -212,11 +212,19 @@
       background-color: transparent;
       border: none;
       border-radius: 15px;
-      width: 250px;
-      height: 250px;
+      width: 700px;
+      height: 550px;
       cursor: pointer;
       overflow: hidden;
       transition: transform 0.2s ease-in-out;
+    }
+    .image-button span::before,
+    .image-button span::after {
+            content: "";
+            display: inline-block;
+            width: 3rem;
+            border-bottom: 2px solid #ffffff;
+            margin: 0 20px;
     }
     .image-button img {
       width: 100%;
@@ -326,4 +334,5 @@
       </div>
 </body>
 </html>
+
 
