@@ -73,6 +73,10 @@
             margin: 0;
         }
         .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             text-align: center;
             color: #fff;
             z-index: 1;
@@ -84,24 +88,73 @@
             margin-top: 0.5rem;
         }
         .button {
-            margin-top: 2rem;
-            z-index: 1;
-        }
-        .button button {
-            color: #fff;
-            background-color: #1D2731;
-            font-size: clamp(1rem, 1.5vw, 1.25rem);
-            padding: clamp(0.5rem, 1vw, 1rem) clamp(1rem, 4vw, 2.5rem);
-            border: none;
-            border-radius: clamp(5px, 1vw, 10px);
+            position: relative;
+            width: 280px;
+            height: 65px;
+            overflow: hidden;
+            border: 2px solid rgb(29, 77, 81);
+            border-radius: 100px;
             cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .button:hover {
+            transform: scale(1.05);
+        }
+        .button span.left{
+            background-color: rgb(29, 77, 81);
+            left: 0;
+            border-right: 1px solid #0003;
+            border-radius: 100px 0 0 100px;
+        }
+        .button span.right{
+            background-color: rgb(29, 77, 81);
+            right: 0;
+            border-right: 1px solid #0003;
+            border-radius: 0 100px 100px 0;
+        }
+        .button::after {
+            content: 'Welcome!';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
             font-family: "Montserrat", sans-serif;
-            transition: transform 0.2s ease, background-color 0.2s ease;
+            font-weight: bold;
+            text-transform: uppercase;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
-        .button button:hover {
-            transform: scale(1.1);
+        .button span.left,
+        .button span.right {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            color: #ffffff;
+            pointer-events: none;
+            transition: transform 0.3s ease;
         }
-        .button button:active {
+        .button:hover span.left{
+            transform: translateX(-100%);
+        }
+        .button:hover span.right{
+            transform: translateX(100%);
+        }
+        .button:hover::after{
+            opacity: 1;
+        }
+        .button:active {
             transform: scale(0.9);
         }
         .links-left a:hover,
@@ -280,7 +333,38 @@
         .image-button:active {
             transform: scale(0.9);
         }
-
+        .fourth-wrapper {
+            background-color: #2B4257;
+            width: 100vw;
+            padding: clamp(3rem, 10vw, 6rem);
+            text-align: center;
+            color: #fff;
+        }
+        .fourth-content p {
+            font-family: "Playfair Display", sans-serif;
+            color: #fff;
+            font-size: clamp(2rem, 6vw, 4rem);
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .Search{
+            font-family: "Montserrat", sans-serif;
+            color: #fff;
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .Search::before,
+        .Search::after {
+            content: "";
+            display: inline-block;
+            width: clamp(5rem, 10vw, 10rem);
+            border-bottom: 2px solid #ffffff;
+            margin: 0 clamp(1vw, 2vw, 2rem);
+        }
     </style>
 </head>
 <body>
@@ -308,7 +392,8 @@
                 <div class="name">Archipelago</div>
                 <p>A Journey Through Southeast Asia</p>
                 <div class="button">
-                    <button>Reserve Now</button>
+                    <span class="left">Reserve</span>
+                    <span class="right">Now</span>
                 </div>
             </div>
         </div>        
@@ -340,7 +425,7 @@
     </div>
     <div class="third-wrapper">
         <div class="Discover"><span>Discover</span></div>
-        <div class="Menu">Menu</div>
+        <div class="Menu">Our Menu</div>
         <div class="button-container">
           <div class="top-row">
             <button class="image-button">
@@ -364,6 +449,11 @@
           </div>
         </div>
       </div>
+      <div class="fourth-div">
+        <div class="fourth-content">
+            <div class="Search">Search</div>
+            <p>Location</p>
+        </div>
+      </div>
 </body>
 </html>
-
