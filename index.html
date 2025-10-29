@@ -89,11 +89,11 @@
         }
         .button {
             position: relative;
-            width: 280px;
-            height: 65px;
+            width: clamp(15rem, 35vw, 280px);
+            height: clamp(3rem, 8vh, 65px);
             overflow: hidden;
             border: 2px solid rgb(29, 77, 81);
-            border-radius: 100px;
+            border-radius: clamp(3rem, 20vw, 100px);
             cursor: pointer;
             transition: transform 0.2s ease;
         }
@@ -104,13 +104,13 @@
             background-color: rgb(29, 77, 81);
             left: 0;
             border-right: 1px solid #0003;
-            border-radius: 100px 0 0 100px;
+            border-radius: clamp(3rem, 20vw, 100px) 0 0 clamp(3rem, 20vw, 100px);
         }
         .button span.right{
             background-color: rgb(29, 77, 81);
             right: 0;
             border-right: 1px solid #0003;
-            border-radius: 0 100px 100px 0;
+            border-radius: 0 clamp(3rem, 20vw, 100px) clamp(3rem, 20vw, 100px) 0;
         }
         .button::after {
             content: 'Welcome!';
@@ -144,6 +144,7 @@
             color: #ffffff;
             pointer-events: none;
             transition: transform 0.3s ease;
+            font-size: clamp(1rem, 2vw, 1.2rem);
         }
         .button:hover span.left{
             transform: translateX(-100%);
