@@ -689,6 +689,26 @@ html, body{
             </ul>
         </div>
       </div>
+      <script>
+        const observer = new IntersectionObserver((entries)=>{
+     entries.forEach((entry)=>{
+        if(entry.isIntersecting){
+            console.log(entry.target)
+            entry.target.classList.add("show")
+        }
+        else{
+            entry.target.classList.remove("show")
+        }
+     })
+}, {})
+const contentElements = document.querySelectorAll(".second-wrapper, .section-two, .top-row, .bottom-row, .wrapper, .Discover, .Menu, .fourth-div, .fifth-wrapper")
+contentElements.forEach(el => observer.observe(el))
+
+const contentParagraphs = document.querySelectorAll(".content p");
+contentParagraphs.forEach((p, index) => {
+  p.style.transitionDelay = `${index * 0.1}s`;
+  observer.observe(p);
+});
+    </script>
 </body>
 </html>
-
