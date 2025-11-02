@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archipelago</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Permanent+Marker&family=Roboto+Slab:wght@100..900&family=Rubik+Wet+Paint&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Rubik+Wet+Paint&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Rubik+Wet+Paint&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baskervville+SC:wght@400..700&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Rubik+Wet+Paint&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-RXf+QSDCUq1z8mZ+..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html{
+    background-color: #1D2731;
+}
+html, body{
+    overflow-x: hidden;
+}
+.links-left a, .links-right a{
+    color: #fff;
+    text-decoration: none;
+    font-family: "Baskervville", serif;
+    margin-top: 0.5rem;
+    display: inline-block;
+    padding: 0 1.5vw;
+}
+.links-left a{
+    padding-left: 5vw;
+}
+.links-right a{
+    padding: 1vw 3vw;
+}
+.logo{
+    margin-top: 1rem;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 1vw;
+}
+.links-left a:hover,
+.links-right a:hover{
+    color: #4ac5cb;
+    text-decoration: underline;
+}
+.links-left a:active,
+.links-right a:active{
+    color: #126468;
+    text-decoration: underline;
+}
+.second-wrapper{
+    background-color: #1F4762;
+    padding-top: 1rem;
+    padding-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.second-wrapper .contact{
+    color: #fff;
+    font-family: "Playfair Display", serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1rem, 7vw, 15rem);
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+.contact::before,
+.contact::after{
+    content: "";
+    display: inline-block;
+    width: clamp(7rem, 17vw, 20rem);
+    border-bottom: 2px solid #ffffff;
+    margin: 0 clamp(1vw, 2vw, 2rem);
+}
+.contact-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+.contact-img img{
+    width: clamp(70rem, 30vw, 120rem);
+}
+.second-wrapper .connect{
+    margin-top: 3rem;
+    display: flex;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #14202E;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    border-radius: 0.9rem;
+    text-align: right;
+    padding-left: 15rem;
+    padding-right: 1rem;
+    font-size: clamp(0.8rem, 2vw, 3rem);
+    box-shadow: clamp(1px, 0.3vw, 4px) clamp(1px, 0.3vw, 4px) clamp(2px, 0.6vw, 8px) rgba(0, 0, 0, 0.6);
+}
+.fifth-wrapper{
+    background-color: #000;
+    padding: 2rem;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fifth-wrapper.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.fifth-div{
+    display: flex;
+    justify-content: center;
+}
+.fifth-content{
+    display: inline-block;
+    justify-content: center;
+}
+.social-icons{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+.social-icons a{
+    color: #fff; 
+    font-size: clamp(1.5rem, 1vw, 5rem);
+    transition: color 0.3s;
+    margin-top: 2rem;
+    border: 0.1rem solid #fff;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+.social-icons a:hover{
+    color: #4ac5cb;
+}
+.fifth-content span{
+    font-family: "Playfair Display", sans-serif;
+    color: #fff;
+    font-size: clamp(1.5rem, 3vw, 7rem);
+}
+.secondLogo{
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+.locations{
+    display: flex;
+    justify-content: center;
+}
+.locations ul{
+    list-style-type: none;
+    padding: 0.1rem;
+    color: #fff;
+    margin: 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    gap: 15rem;
+    border-radius: 0.3rem;
+    margin-top: 3rem;
+    font-size: clamp(1.5rem, 1vw, 4rem);
+}
+.quezon{
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: 500ms ease;
+}
+.quezon.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+.taguig{
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: 500ms ease;
+}
+.taguig.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+.makati{
+    opacity: 0;
+    transform: translateX(100px);
+    transition: 500ms ease;
+}
+.makati.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+.pasay{
+    opacity: 0;
+    transform: translateX(100px);
+    transition: 500ms ease;
+}
+.pasay.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+.connect{
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 500ms ease;
+}
+.connect.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.contact{
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 500ms ease;
+}
+.contact.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="links-left">
+                <a href="home.html">Home</a>
+                <a href="#">About</a>
+                <a href="#">Reservation</a>
+            </div>
+            <div class="logo">
+                <img src="C:\Users\Laptop Supplier PH\Downloads\Code\A - intro code\Logo.png">
+            </div>
+            <div class="links-right">
+                <a href="#">Delivery</a>
+                <a href="#">Menu</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>   
+    </div>
+    <div class="second-wrapper">
+        <div class="contact">Contact Us</div>
+        <div class="contact-img">
+            <img src="C:\Users\Laptop Supplier PH\Downloads\Code\A - intro code\contact-quezon.png" class="quezon">
+            <img src="C:\Users\Laptop Supplier PH\Downloads\Code\A - intro code\contact-makati.png" class="makati">
+            <img src="C:\Users\Laptop Supplier PH\Downloads\Code\A - intro code\contact-taguig.png" class="taguig">
+            <img src="C:\Users\Laptop Supplier PH\Downloads\Code\A - intro code\contact-pasay.png" class="pasay">
+        </div>
+        <div class="connect">Choose your nearest branch and let<br>us serve you wherever you are</div>
+    </div>
+    <div class="fifth-wrapper">
+        <div class="fifth-div">
+            <div class="fifth-content">
+                <div class="secondLogo">
+                    <img src="C:\Users\Laptop Supplier PH\Downloads\Code\A - intro code\Logo.png">
+                </div>
+                <span>Archipelago</span>
+              </div>
+            </div>
+          <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
+        </div>    
+        <div class="locations">
+            <ul>
+                <li>Quezon City</li>
+                <li>Makati City</li>
+                <li>Taguig City</li>
+                <li>Pasay City</li>
+            </ul>
+        </div>
+      </div>
+      <script>
+        const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      console.log(entry.target);
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
+    }
+  });
+}, {});
+
+const contentElements = document.querySelectorAll(
+  ".contact, .quezon, .makati, .taguig, .pasay, .connect, .fifth-wrapper"
+);
+contentElements.forEach((el) => observer.observe(el));
+      </script>
+</body>
+</html>
