@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archipelago</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Permanent+Marker&family=Roboto+Slab:wght@100..900&family=Rubik+Wet+Paint&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Rubik+Wet+Paint&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Rubik+Wet+Paint&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baskervville+SC:wght@400..700&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Rubik+Wet+Paint&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-RXf+QSDCUq1z8mZ+..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html{
+    background-color: #1D2731;
+}
+html, body{
+    overflow-x: hidden;
+}
+.links-left a, .links-right a{
+    color: #fff;
+    text-decoration: none;
+    font-family: "Baskervville", serif;
+    margin-top: 0.5rem;
+    display: inline-block;
+    padding: 0 1.5vw;
+}
+.links-left a{
+    padding-left: 5vw;
+}
+.links-right a{
+    padding: 1vw 3vw;
+}
+.logo{
+    margin-top: 1rem;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 1vw;
+}
+.links-left a:hover,
+.links-right a:hover{
+    color: #4ac5cb;
+    text-decoration: underline;
+}
+.links-left a:active,
+.links-right a:active{
+    color: #126468;
+    text-decoration: underline;
+}
+.fourth-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    opacity: 1;
+    transform: translateY(100px);
+}
+.fourth-div.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.fourth-content {
+    background-image: url('reserve bg.png');
+    color: #fff;
+    padding: clamp(3rem, 10vw, 6rem);
+    width: 100%;
+}
+.fourth-wrapper{
+    background-color: #2B4257;
+    width: 100vw;
+    padding: clamp(3rem, 10vw, 6rem);
+    text-align: center;
+    color: #fff;
+}
+.fourth-content p{
+    font-family: "Playfair Display", sans-serif;
+    color: #fff;
+    font-size: clamp(2rem, 6vw, 4rem);
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Make{
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.Make::before,
+.Make::after{
+    content: "";
+    display: inline-block;
+    width: clamp(5rem, 10vw, 10rem);
+    border-bottom: 2px solid #ffffff;
+    margin: 0 clamp(1vw, 2vw, 2rem);
+}
+.navBar{
+    display: flex;
+    justify-content: center;
+}
+.navBar ul{
+    list-style-type: none;
+    background-color: #D9D9D9;
+    padding: 0.1rem;
+    margin: 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    gap: 11rem;
+    border-radius: 0.3rem;
+}
+.navBar a{
+    color: #000;
+    text-decoration: none;
+    padding: 0.9rem;
+    display: block;
+    text-align: center;
+    margin-left: 0.3rem;
+    margin-right: 1rem;
+    font-size: clamp(0.8rem, 1.2vw, 2.2vh);
+}
+.make-reserve{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.make-reserve.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.nav-image{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.nav-image img {
+    width: clamp(74.3rem, 30%, 100rem); 
+    height: auto;             
+    display: block;
+    margin: 0 auto;
+}
+.location-container{
+    text-align: center;
+}
+.location-info{
+    display: inline-block;
+    background-color: #14202E;
+    padding: 0.3rem 16.7rem;
+    padding-bottom: 3rem;
+}
+.location-info p{
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+    color: #fff;
+    margin: 0.3rem 0;
+    text-align: center;
+}
+.location-info .opening, .daysF, .daysS{
+    font-weight: bold;
+}
+.navBar .quezon{
+    font-size: clamp(1rem, 7vw, 20rem);
+}
+.location-info .city{
+    font-family: "Playfair Display", sans-serif;
+}
+.location-info .opening{
+    margin-top: 3rem;
+    font-size: clamp(0.8rem, 2vw, 4rem);
+}
+.location-info .city{
+    font-size: clamp(2.5rem, 10vw, 7.4rem);
+}
+.location-info .days-row,
+.location-info .time-row{
+    display: flex;
+    justify-content: center;
+    gap: 15rem;
+    margin: 0.3rem 0;
+}
+.location-info .timeF{
+    margin-left: 0.3rem;
+    margin-right: 2rem;
+}
+.links-left .reservation-nav{
+    text-decoration: underline;
+}
+.make-reservation{
+    background-color: #14202E;
+    padding: 2rem;
+    box-shadow: 0 0 0.25rem 0.75rem rgb(255, 255, 255); 
+    width: 100%;
+    max-width: 25rem;
+    text-align: center;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem; 
+}
+label{
+    font-weight: bold;
+    margin-bottom: 0.5rem; 
+    font-size: 0.9375rem; 
+    text-align: left;
+}
+input{
+    padding: 0.625rem; 
+    border-radius: 0.5rem; 
+    border: 0.0625rem solid #ccc; 
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+button{
+    width: 100%;
+    padding: 0.75rem; 
+    border: none;
+    border-radius: 0.5rem; 
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover{
+    background-color: #0056b3;
+}
+@media (max-width: 400px){
+    .reservation-container{
+        padding: 1.5rem;
+    }
+    input, button{
+        font-size: 0.9375rem;
+    }
+}
+.date, .time, .people{
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+}
+.table{
+    margin-top: 2rem;
+}
+.reservation-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    gap: 3rem;
+    background-color: #000000;
+    padding: 2rem;
+    max-width: 70rem; 
+    margin-top: 5rem; 
+    margin: 5rem auto;
+    
+}
+.reservation-form{
+    flex: 1;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+.reservation-image{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reservation-image img{
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reservation-image.show img {
+    opacity: 1;
+    transform: scale(1);
+}
+.reservation-title{
+    font-family: "Montserrat", sans-serif;
+    text-decoration: underline;
+    margin-bottom: 2rem;
+}
+.fifth-wrapper{
+    background-color: #000;
+    padding: 2rem;
+    width: 100%;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fifth-wrapper.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.fifth-div{
+    display: flex;
+    justify-content: center;
+}
+.fifth-content{
+    display: inline-block;
+    justify-content: center;
+}
+.social-icons{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+.social-icons a{
+    color: #fff; 
+    font-size: clamp(1.5rem, 1vw, 5rem);
+    transition: color 0.3s;
+    margin-top: 2rem;
+    border: 0.1rem solid #fff;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+.social-icons a:hover{
+    color: #4ac5cb;
+}
+.fifth-content span{
+    font-family: "Playfair Display", sans-serif;
+    color: #fff;
+    font-size: clamp(1.5rem, 3vw, 7rem);
+}
+.secondLogo{
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+.locations{
+    display: flex;
+    justify-content: center;
+}
+.locations ul{
+    list-style-type: none;
+    padding: 0.1rem;
+    color: #fff;
+    margin: 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    gap: 15rem;
+    border-radius: 0.3rem;
+    margin-top: 3rem;
+    font-size: clamp(1.5rem, 1vw, 4rem);
+}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="links-left">
+                <a href="home.html" class="home">Home</a>
+                <a href="#">About</a>
+                <a href="#" class="reservation-nav">Reservation</a>
+            </div>
+            <div class="logo">
+                <img src="C:\Users\Laptop Supplier PH\Downloads\Code\A - intro code\Logo.png">
+            </div>
+            <div class="links-right">
+                <a href="#">Delivery</a>
+                <a href="#">Menu</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>      
+    </div>
+    <div class="fourth-div">
+        <div class="fourth-content">
+            <div class="make-reserve">
+                <div class="Make">Make</div>
+                <p>Reservations</p>
+            </div>
+            <nav class="navBar">
+                <ul>
+                    <li class="quezon"><a href="#">Quezon City</a></li>
+                    <li class="makati"><a href="#">Makati City</a></li>
+                    <li class="taguig"><a href="#">Taguig City</a></li>
+                    <li class="newport"><a href="#">Newport World Resorts</a></li>
+                </ul>
+            </nav>
+            <div class="nav-image">
+                <img src="C:\Users\Laptop Supplier PH\Downloads\Code\A - intro code\Quezon.png">
+            </div>
+            <div class="location-container">
+                <div class="location-info">
+                    <p class="city">Quezon City</p>
+                    <p class="address">938 Aurora Blvd, Cubao, Quezon City, 1109 Metro Manila</p>
+                    <p class="opening">Opening Hours</p>
+                    <div class="days-row">
+                        <p class="daysF">Mondays to Thursdays</p>
+                        <p class="daysS">Fridays to Sundays</p>
+                    </div>
+                    <div class="time-row">
+                        <p class="timeF">11:00 AM - 8:00 PM</p>
+                        <p class="timeS">11:00 AM - 9:00 PM</p>
+                    </div>
+                </div>
+                <div class="reservation-container">
+                    <div class="make-reservation">
+                        <div class="reservation-title">Make a Reservation</div>
+                        <div class="input-row">
+                            <div>
+                                <label for="date" class="date">Date</label>
+                                <input type="date" id="date">
+                            </div>
+                            <div>
+                                <label for="time" class="time">Time</label>
+                                <input type="time" id="time">
+                            </div>
+                            <div>
+                                <label for="people" class="people">People</label>
+                                <input type="number" id="people" min="1" max="20" value="1">
+                            </div>
+                        </div>
+                        <button class="table">Find a Table</button>
+                    </div>
+                    <div class="reservation-image">
+                        <img src="C:\Users\Laptop Supplier PH\Downloads\Code\A - intro code\quezon-reserve.png">
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div class="fifth-wrapper">
+            <div class="fifth-div">
+                <div class="fifth-content">
+                    <div class="secondLogo">
+                        <img src="C:\Users\Laptop Supplier PH\Downloads\Code\A - intro code\Logo.png">
+                    </div>
+                    <span>Archipelago</span>
+                  </div>
+                </div>
+              <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
+            </div>    
+            <div class="locations">
+                <ul>
+                    <li>Quezon City</li>
+                    <li>Makati City</li>
+                    <li>Taguig City</li>
+                    <li>Pasay City</li>
+                </ul>
+            </div>
+          </div>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      console.log(entry.target);
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
+    }
+  });
+}, {});
+
+const contentElements = document.querySelectorAll(".fourth-div, .fifth-wrapper");
+contentElements.forEach((el) => observer.observe(el));
+
+observer.observe(document.querySelector(".make-reserve"));
+observer.observe(document.querySelector(".reservation-image"));
+observer.observe(document.querySelector(".nav-image"));
+observer.observe(document.querySelector(".location-info"));
+
+const contentParagraphs = document.querySelectorAll(".content p");
+contentParagraphs.forEach((p, index) => {
+  p.style.transitionDelay = `${index * 0.1}s`;
+  observer.observe(p);
+});
+
+const navLinks = document.querySelectorAll(".navBar a");
+const cityName = document.querySelector(".location-info .city");
+const cityAddress = document.querySelector(".location-info .address");
+const cityImage = document.querySelector(".nav-image img");
+const reservationImage = document.querySelector(".reservation-image img"); 
+
+const cityData = {
+  "Quezon City": {
+    img: "Quezon.png",
+    address: "938 Aurora Blvd, Cubao, Quezon City, 1109 Metro Manila",
+    reservationImage: "quezon-reserve.png"
+  },
+  "Makati City": {
+    img: "Makati.png",
+    address: "San Lorenzo Village, 900A. Arnaiz Avenue, Corner Paseo de Roxas, Makati City",
+    reservationImage: "makati-reserve.png"
+  },
+  "Taguig City": {
+    img: "Taguig.png",
+    address: "LG/F, One Bonifacio, High Street, Taguig, Metro Manila",
+    reservationImage: "taguig-reserve.png"
+  },
+  "Newport World Resorts": {
+    img: "Newport.png",
+    address: "G/F Newport Mall, Newport World Resorts, Pasay City",
+    reservationImage: "newport-reserve.png"
+  }
+};
+const cityFontSizes = {
+  "Quezon City": "clamp(2.5rem, 10vw, 7.4rem)",
+  "Makati City": "clamp(2.2rem, 10vw, 8rem)",
+  "Taguig City": "clamp(2rem, 10vw, 8rem)",
+  "Newport World Resorts": "clamp(1.8rem, 4.1vw, 11rem)"
+};
+navLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    navLinks.forEach((l) => {
+      l.style.backgroundColor = "";
+      l.style.color = "";
+    });
+
+    link.style.backgroundColor = "#083C5D";
+    link.style.color = "#fff";
+
+    const selectedCity = link.textContent.trim();
+    const data = cityData[selectedCity];
+
+    cityName.textContent = selectedCity;
+    cityImage.src = data.img;
+    cityAddress.textContent = data.address;
+
+    cityName.style.fontSize = cityFontSizes[selectedCity] || "clamp(2rem, 3vw, 4rem)";
+
+    reservationImage.src = data.reservationImage;
+
+    reservationImage.classList.remove("show");
+    void reservationImage.offsetWidth; 
+    reservationImage.classList.add("show");
+  });
+});
+    </script>
+</body>
+</html>
