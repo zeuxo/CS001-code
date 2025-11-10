@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archipelago</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archipelago</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Permanent+Marker&family=Roboto+Slab:wght@100..900&family=Rubik+Wet+Paint&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Rubik+Wet+Paint&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Rubik+Wet+Paint&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baskervville+SC:wght@400..700&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Rubik+Wet+Paint&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-RXf+QSDCUq1z8mZ+..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html{
+    background-color: #1D2731;
+}
+html, body{
+    overflow-x: hidden;
+}
+.links-left a, .links-right a{
+    color: #fff;
+    text-decoration: none;
+    font-family: "Baskervville", serif;
+    margin-top: 0.5rem;
+    display: inline-block;
+    padding: 0 1.5vw;
+}
+.links-left a{
+    padding-left: 5vw;
+}
+.links-right a{
+    padding: 1vw 3vw;
+}
+.logo{
+    margin-top: 1rem;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 1vw;
+}
+.links-left a:hover,
+.links-right a:hover{
+    color: #4ac5cb;
+    text-decoration: underline;
+}
+.links-left a:active,
+.links-right a:active{
+    color: #126468;
+    text-decoration: underline;
+}
+.links-left .about{
+    text-decoration: underline;
+}
+.second-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    opacity: 0;
+    overflow: hidden; 
+    transition: 0.8s ease;
+}
+.second-wrapper.show{
+    opacity: 1;
+}
+.second-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('about-screen_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 1; 
+    z-index: 0;
+}
+.second-wrapper * {
+    position: relative;
+    z-index: 1; 
+}
+.first-title{
+    font-family: "Playfair Display", serif;
+    font-size: clamp(3rem, 12vw, 12rem);
+    color: #000;
+}
+.first-sentence{
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(0.5rem, 5vw, 2rem);
+    color: #000;
+    font-weight: bold;
+}
+.third-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; 
+}
+.third-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('about-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    filter: brightness(1.5); 
+    z-index: 0;
+}
+.third-wrapper * {
+    position: relative;
+    z-index: 1; 
+}
+.first-overlap-box {
+    position: absolute;
+    top: calc(200vh - -20px);
+    left: 33%;
+    width: 30vw;
+    background-color: #14202E;
+    padding: 1rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(-300px);
+    transition: 0.8s ease;
+    z-index: 5;
+}
+.first-overlap-box.show {
+    opacity: 1;
+    transform: translateX(-150px);
+}
+.first-overlap-box p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    text-align: left;
+    padding-left: 2rem;
+}
+.second-overlap-box {
+    position: absolute;
+    top: calc(200vh - -80px);
+    left: 63%;
+    width: 30vw;
+    background-color: #000;
+    padding: 1rem;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(200px);
+    transition: 0.8s ease;
+    z-index: 5;
+}
+.second-overlap-box.show {
+    opacity: 1;
+    transform: translateX(-150px);
+}
+.second-overlap-box p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    text-align: right;
+    padding: 3rem;
+    padding-right: 2rem;
+}
+.minds-text{
+    margin-bottom: 1rem;
+    font-family: "Montserrat", sans-serif;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 0.8s ease;
+}
+.minds-text.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.minds-text::before,
+.minds-text::after{
+    content: "";
+    display: inline-block;
+    width: clamp(5rem, 10vw, 10rem);
+    border-bottom: 2px solid #000;
+    margin: 0 clamp(1vw, 2vw, 2rem);
+}
+.BTM-text{
+    margin-bottom: 35rem;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(3rem, 5vw, 5rem);
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 0.8s ease;
+}
+.BTM-text.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.fourth-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; 
+}
+.fourth-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1D2731;
+    z-index: 0;
+}
+.fifth-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 120vh;
+    margin: 0;
+    overflow: hidden; 
+    opacity: 0;
+    transform: translateX(300px);
+    transition: 0.8s ease;
+}
+.fifth-wrapper.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+.fifth-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #614E41;
+    z-index: 0;
+}
+.fifth-wrapper img{
+    width: 50vw;
+}
+.fifth-wrapper p{
+    font-family: "Playfair Display", serif;
+    position: absolute; 
+    top: 33%;
+    left: 59%;
+    color: #fff;
+    font-size: 3.5rem;
+    text-align: center;
+}
+.fifth-wrapper * {
+    position: relative;
+}
+.fifth-wrapper .star{
+    position: absolute; 
+    top: 20%;
+    left: 75%;
+    width: 30rem;
+    height: 10rem;
+    transform: translateX(-50%); 
+    z-index: 10;
+}
+.sixth-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 120vh;
+    margin: 0;
+    overflow: hidden; 
+    opacity: 0;
+    transform: translateX(-300px);
+    transition: 0.8s ease;
+}
+.sixth-wrapper.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+.sixth-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #28221E;
+    z-index: 0;
+}
+.sixth-wrapper img{
+    width: 50vw;
+    left: 50%;
+}
+.sixth-wrapper * {
+    position: relative;
+}
+.sixth-wrapper .star{
+    position: absolute; 
+    top: 20%;
+    left: 25%;
+    width: 30rem;
+    height: 10rem;
+    transform: translateX(-50%); 
+    z-index: 10;
+}
+.sixth-wrapper p{
+    font-family: "Playfair Display", serif;
+    position: absolute; 
+    top: 33%;
+    left: 10%;
+    color: #fff;
+    font-size: 4rem;
+    text-align: center;
+}
+.seventh-wrapper{
+    background-color: #151414;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.meet{
+    margin-bottom: 1rem;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    padding-top: 1.5rem;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 0.8s ease;
+}
+.meet.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.meet::before,
+.meet::after{
+    content: "";
+    display: inline-block;
+    width: clamp(5rem, 10vw, 10rem);
+    border-bottom: 2px solid #fff;
+    margin: 0 clamp(1vw, 2vw, 2rem);
+}
+.first-face {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100vw;
+    height: 180vh;
+    margin: 0;
+    overflow: hidden; 
+}
+.first-face::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('jas.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 1; 
+    z-index: 0;
+}
+.first-face * {
+    position: relative;
+    z-index: 1;
+}
+.first-face{
+    font-family: "Playfair Display", serif;
+    font-size: 5rem;
+    gap: 55rem;
+}
+.first-part {
+    position: relative;
+    width: 100vw;
+    height: 110vh;
+    margin: 0;
+    overflow: hidden; 
+}
+.first-part::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #B984DB;
+    z-index: 0;
+}
+.first-part img{
+    width: 50vw;
+    left: 50%;
+}
+.first-part p{
+    font-family: "Montserrat", sans-serif;
+    position: absolute; 
+    top: 3%;
+    left: 15%;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: left;
+}
+.first-part * {
+    position: relative;
+}
+.second-face {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100vw;
+    height: 180vh;
+    margin: 0;
+    overflow: hidden; 
+}
+.second-face::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('charles.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 1; 
+    z-index: 0;
+}
+.second-face * {
+    position: relative;
+    z-index: 1;
+}
+.second-face{
+    font-family: "Playfair Display", serif;
+    font-size: 5rem;
+    gap: 55rem;
+}
+.second-part {
+    position: relative;
+    width: 100vw;
+    height: 110vh;
+    margin: 0;
+    overflow: hidden; 
+}
+.second-part::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2F3B22;
+    z-index: 0;
+}
+.second-part img{
+    width: 50vw;
+}
+.second-part p{
+    font-family: "Montserrat", sans-serif;
+    position: absolute; 
+    top: 5%;
+    left: 63%;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: right;
+}
+.second-part * {
+    position: relative;
+}
+.third-face {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100vw;
+    height: 180vh;
+    margin: 0;
+    overflow: hidden; 
+}
+.third-face::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('patricia.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 1; 
+    z-index: 0;
+}
+.third-face * {
+    position: relative;
+    z-index: 1;
+}
+.third-face{
+    font-family: "Playfair Display", serif;
+    font-size: 5rem;
+    gap: 55rem;
+}
+.third-part {
+    position: relative;
+    width: 100vw;
+    height: 110vh;
+    margin: 0;
+    overflow: hidden; 
+}
+.third-part::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #5A189A;
+    z-index: 0;
+}
+.third-part img{
+    width: 50vw;
+    left: 50%;
+}
+.third-part p{
+    font-family: "Montserrat", sans-serif;
+    position: absolute; 
+    top: 5%;
+    left: 15%;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: left;
+}
+.third-part * {
+    position: relative;
+}
+.fourth-face {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100vw;
+    height: 180vh;
+    margin: 0;
+    overflow: hidden; 
+}
+.fourth-face::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('joruss.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 1; 
+    z-index: 0;
+}
+.fourth-face * {
+    position: relative;
+    z-index: 1;
+}
+.fourth-face{
+    font-family: "Playfair Display", serif;
+    font-size: 5rem;
+    gap: 55rem;
+}
+.fourth-part {
+    position: relative;
+    width: 100vw;
+    height: 110vh;
+    margin: 0;
+    overflow: hidden; 
+}
+.fourth-part::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 0;
+}
+.fourth-part img{
+    width: 50vw;
+}
+.fourth-part p{
+    font-family: "Montserrat", sans-serif;
+    position: absolute; 
+    top: 10%;
+    left: 63%;
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: right;
+}
+.fourth-part * {
+    position: relative;
+}
+.eighth-wrapper{
+    background-color: #151414;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    padding: 2rem;
+}
+.ninth-wrapper{
+    background-color: #14202E;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.ninth-wrapper h2{
+    font-family: "Playfair Display", serif;
+    font-size: 5rem;
+}
+.ninth-wrapper p{
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    padding-bottom: 10rem;
+}
+.tenth-wrapper{
+    background-color: #000;
+    padding: 2rem;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.tenth-wrapper.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.tenth-div{
+    display: flex;
+    justify-content: center;
+}
+.tenth-content{
+    display: inline-block;
+    justify-content: center;
+}
+.social-icons{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+.social-icons a{
+    color: #fff; 
+    font-size: clamp(1.5rem, 1vw, 5rem);
+    transition: color 0.3s;
+    margin-top: 2rem;
+    border: 0.1rem solid #fff;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+.social-icons a:hover{
+    color: #4ac5cb;
+}
+.tenth-content span{
+    font-family: "Playfair Display", sans-serif;
+    color: #fff;
+    font-size: clamp(1.5rem, 3vw, 7rem);
+}
+.secondLogo{
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+.locations{
+    display: flex;
+    justify-content: center;
+}
+.locations ul{
+    list-style-type: none;
+    padding: 0.1rem;
+    color: #fff;
+    margin: 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    gap: 15rem;
+    border-radius: 0.3rem;
+    margin-top: 3rem;
+    font-size: clamp(1.5rem, 1vw, 4rem);
+}
+.left{
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: 0.8s ease;
+}
+.left.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+.right{
+    opacity: 0;
+    transform: translateX(100px);
+    transition: 0.8s ease;
+}
+.right.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+.first-part p{
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: 0.8s ease;
+}
+.first-part p.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+.third-part p{
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: 0.8s ease;
+}
+.third-part p.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+.second-part p{
+    opacity: 0;
+    transform: translateX(100px);
+    transition: 0.8s ease;
+}
+.second-part p.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+.fourth-part p{
+    opacity: 0;
+    transform: translateX(100px);
+    transition: 0.8s ease;
+}
+.fourth-part p.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+.eighth-wrapper{
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.eighth-wrapper.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.tenth-wrapper{
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.tenth-wrapper.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.ninth-wrapper h2{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 0.8s ease;
+}
+.ninth-wrapper h2.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.ninth-wrapper p{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 0.8s ease;
+}
+.ninth-wrapper p.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="links-left">
+                <a href="home.html" class="home">Home</a>
+                <a href="#" class="about">About</a>
+                <a href="reservation.html">Reservation</a>
+            </div>
+            <div class="logo">
+                <img src="C:\Users\Laptop Supplier PH\Downloads\Code\A - intro code\Logo.png">
+            </div>
+            <div class="links-right">
+                <a href="#">Delivery</a>
+                <a href="#">Menu</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>    
+    </div>
+    <div class="second-wrapper">
+        <div class="first-title">Archipelago</div>
+        <p class="first-sentence">The Heart of Southeast Asia on Every Plate</p>
+    </div>
+    <div class="first-overlap-box">
+        <p>Archipelago was born<br>
+            from the collective vision<br>
+            of Mejia, Brioso, Urbina, <br>
+            and Vargas  — four chefs<br>
+            united by friendship and<br>
+            a shared reverence for<br>
+            Southeast Asia's artistry<br>
+            and soul. Drawing from<br>
+            decades of experience in<br>
+            the region's most<br>
+            respected kitchens, they<br>
+            bring the discipline,<br>
+            creativity, and cultural<br>
+            depth that define the<br>
+            Southeast Asian spirit
+        </p>
+    </div>
+    <div class="second-overlap-box">
+        <p>Guided by tradition yet<br>
+            driven by innovation,<br>
+            Archipelago is space where<br>
+            craftsmanship transcends<br>
+            borders. Every element —<br>
+            from the sourcing of<br>
+            ingredients to the<br>
+            presentation of each dish  —<br>
+            reflects a balance of<br>
+            authenticity and refinement.
+        </p>
+    </div>
+    <div class="third-wrapper">
+        <div class="minds-text">The Minds</div>
+        <div class="BTM-text">Behind The Menu</div>
+    </div>
+    <div class="fourth-wrapper"></div>
+    <div class="fifth-wrapper">
+        <img src="C:\Users\Laptop Supplier PH\Downloads\Code\A - intro code\fifth-wrapper-P_C.png">
+        <img src="C:\Users\Laptop Supplier PH\Downloads\Code\A - intro code\star.png" class="star">
+        <p>
+            "Archipelago isn't<br>
+            just serving food —<br>
+            it's rewriting the<br>
+            flavor map of the<br>
+            region "<br>
+            — Anonymous
+        </p>
+    </div>
+    <div class="sixth-wrapper">
+        <img src="C:\Users\Laptop Supplier PH\Downloads\Code\A - intro code\sixth-wrapper-P_J.png">
+        <img src="C:\Users\Laptop Supplier PH\Downloads\Code\A - intro code\star.png" class="star">
+        <p>
+            "Refined<br>
+            without losing<br>
+            its soul. This is<br>
+            Southeast Asia"<br>
+            — Anonymous
+        </p>
+    </div>
+    <div class="seventh-wrapper">
+        <div class="meet">MEET THE</div>
+        <img src="C:\Users\Laptop Supplier PH\Downloads\Code\A - intro code\founders-chef.png">
+    </div>
+    <div class="first-face">
+        <div class="left">Jasmine</div>
+        <div class="right">Brioso</div>
+    </div>
+    <div class="first-part">
+        <img src="C:\Users\Laptop Supplier PH\Downloads\Code\A - intro code\jas-desc.png">
+        <p>
+            Chef Brioso found her<br>
+            rhythm in the vibrant pulse<br>
+            of Thailand and Vietnam —<br>
+            where flavor is both<br>
+            discipline and chaos,<br>
+            harmony and rebellion. Her<br>
+            philosophy is rooted in<br>
+            emotion: she cooks to<br>
+            remember, but also to<br>
+            surprise. Every dish she<br>
+            touches seeks balance not in<br>
+            perfection, but in feeling —<br>
+            the satisfaction of spice<br>
+            meeting calm.<br>
+        </p>
+    </div>
+    <div class="second-face">
+        <div class="left">Charles</div>
+        <div class="right">Mejia</div>
+    </div>
+    <div class="second-part">
+        <img src="C:\Users\Laptop Supplier PH\Downloads\Code\A - intro code\charles-desc.png">
+        <p>
+            Chef Mejia grew up among the<br>
+            tides and hearts of the<br>
+            Philippines, where every<br>
+            meal is a story and every<br>
+            ingredient had memory. His<br>
+            cooking draws from that<br>
+            intimacy — the tenderness of<br>
+            family recipes refined into<br>
+            new forms. To him, a dish is a<br>
+            bridge between past and<br>
+            present, between the<br>
+            warmth of tradition and the<br>
+            clarity of modern craft.
+        </p>
+    </div>
+    <div class="third-face">
+        <div class="left">Patricia</div>
+        <div class="right">Vargas</div>
+    </div>
+    <div class="third-part">
+        <img src="C:\Users\Laptop Supplier PH\Downloads\Code\A - intro code\patricia-desc.png">
+        <p>
+            Chef Vargas stands at the<br>
+            crossroads of Malaysia and<br>
+            Singapore — cultures woven<br>
+            together by trade, taste, and<br>
+            time. She sees cuisine as<br>
+            conversation: tradition<br>
+            meeting progress, mastery<br>
+            meeting humility. Her<br>
+            creations are refined yet<br>
+            deeply personal, built from<br>
+            precision and the belief that<br>
+            elegance begin with<br>
+            understanding.
+        </p>
+    </div>
+    <div class="fourth-face">
+        <div class="left">Joruss</div>
+        <div class="right">Urbina</div>
+    </div>
+    <div class="fourth-part">
+        <img src="C:\Users\Laptop Supplier PH\Downloads\Code\A - intro code\joruss-desc.png">
+        <p>
+            Chef Urbina carries the soul<br>
+            of Indonesia and Brunei—<br>
+            vast, layered, and unafraid of<br>
+            contrast. His hands move like<br>
+            those of an artisan, guided by<br>
+            memory and intuition. In his<br>
+            kitchen, time slows; smoke,<br>
+            spice, and patience converge<br>
+            into something almost<br>
+            sacred. Urbina's food speaks<br>
+            softly but lingers, much like<br>
+            the islands that inspire him.
+        </p>
+    </div>
+    <div class="eighth-wrapper">
+        <p>
+            Together, they form the foundation of Archipelago: four voices,<br>
+            one vision. Each brings a distinct rhythm to the table, composing<br>
+            a collective narrative that honors the region's soul while shaping<br>
+            its future
+        </p>
+    </div>
+    <div class="ninth-wrapper">
+        <h2>MISSION AND VISION</h2>
+        <p>
+            At Archipelago, our mission is to honor and elevate the culinary<br>
+            heritage of Southeast Asia through craftsmanship, collaboration, <br>
+            and deep respect for tradition. Guided by the belief that cuisine<br>
+            transcends borders, we envision Archipelago as a living symbol<br>
+            of Southeast Asia's unity in diversity — a space where flavors,<br>
+            artistry, and culture converge to inspire a global appreciation for<br>
+            the region's enduring soul.
+        </p>
+    </div>
+    <div class="tenth-wrapper">
+        <div class="tenth-div">
+            <div class="tenth-content">
+                <div class="secondLogo">
+                    <img src="C:\Users\Laptop Supplier PH\Downloads\Code\A - intro code\Logo.png">
+                </div>
+                <span>Archipelago</span>
+              </div>
+            </div>
+          <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>    
+        <div class="locations">
+            <ul>
+                <li>Quezon City</li>
+                <li>Makati City</li>
+                <li>Taguig City</li>
+                <li>Pasay City</li>
+            </ul>
+        </div>
+      </div>
+      <script>
+        const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      console.log(entry.target);
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
+    }
+  });
+}, {});
+
+const contentElements = document.querySelectorAll(
+  ".second-wrapper, .minds-text, .BTM-text, .first-overlap-box, .second-overlap-box, .fifth-wrapper, .sixth-wrapper, .meet, .left, .right, .first-part p, .second-part p, .third-part p, .fourth-part p, .eighth-wrapper, .tenth-wrapper, .ninth-wrapper h2, .ninth-wrapper p"
+);
+contentElements.forEach((el) => observer.observe(el));
+      </script>
+</body>
+</html>
