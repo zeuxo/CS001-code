@@ -614,6 +614,39 @@ html, body{
 .links-left .home{
     text-decoration: underline;
 }
+.middle {
+    display: inline-block;
+    background-color: #1D2731;
+    color: #fff;
+    border-radius: 0.3rem;
+    padding: 0.5rem 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    cursor: pointer;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    width: auto;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: 0.3s ease;
+    background-image: linear-gradient(to right, #4ac5cb 50%, #1D2731 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+.middle.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+.middle:hover{
+    background-color: #4ac5cb;
+    background-position: left bottom;
+    color: #000;
+}
+.middle:active {
+    transform: scale(0.95);
+}
     </style>
 </head>
 <body>
@@ -840,6 +873,7 @@ navLinks.forEach((link) => {
       </script>
 </body>
 </html>
+
 
 
 
