@@ -157,7 +157,7 @@ html, body{
 }
 .first-overlap-box p {
     font-family: "Montserrat", sans-serif;
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 1.3vw, 1.3rem);
     color: #fff;
     margin-bottom: 1rem;
     text-align: left;
@@ -182,7 +182,7 @@ html, body{
 }
 .second-overlap-box p {
     font-family: "Montserrat", sans-serif;
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 2vw, 1.3rem);
     color: #fff;
     margin-bottom: 1rem;
     text-align: right;
@@ -274,7 +274,7 @@ html, body{
     top: 33%;
     left: 59%;
     color: #fff;
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 3.5vw, 5rem);
     text-align: center;
 }
 .fifth-wrapper * {
@@ -335,7 +335,7 @@ html, body{
     top: 33%;
     left: 10%;
     color: #fff;
-    font-size: 4rem;
+    font-size: clamp(2rem, 4vw, 5rem);
     text-align: center;
 }
 .seventh-wrapper{
@@ -427,7 +427,7 @@ html, body{
     top: 3%;
     left: 15%;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 1.5vw, 2rem);
     text-align: left;
 }
 .first-part * {
@@ -493,7 +493,7 @@ html, body{
     top: 5%;
     left: 63%;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 1.5vw, 2rem);
     text-align: right;
 }
 .second-part * {
@@ -560,7 +560,7 @@ html, body{
     top: 5%;
     left: 15%;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 1.5vw, 2rem);
     text-align: left;
 }
 .third-part * {
@@ -626,7 +626,7 @@ html, body{
     top: 10%;
     left: 63%;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 1.5vw, 2rem);
     text-align: right;
 }
 .fourth-part * {
@@ -641,7 +641,7 @@ html, body{
     justify-content: center;
     align-items: center;
     font-family: "Montserrat", sans-serif;
-    font-size: 2rem;
+    font-size: clamp(1rem, 3vw, 2rem);
     padding: 2rem;
 }
 .ninth-wrapper{
@@ -660,7 +660,7 @@ html, body{
 }
 .ninth-wrapper p{
     font-family: "Montserrat", sans-serif;
-    font-size: 2rem;
+    font-size: clamp(1rem, 2vw, 2rem);
     padding-bottom: 10rem;
 }
 .tenth-wrapper{
@@ -1056,3 +1056,4 @@ contentElements.forEach((el) => observer.observe(el));
 </body>
 
 </html>
+
