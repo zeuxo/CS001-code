@@ -479,7 +479,7 @@ button:hover{
                                 <input type="number" id="people" min="1" max="20" value="1">
                             </div>
                         </div>
-                        <button class="table">Find a Table</button>
+                        <button class="table">Reserve Table</button>
                     </div>
                     <div class="reservation-image">
                         <img src="../images/quezon-reserve.png">
@@ -598,41 +598,35 @@ navLinks.forEach((link) => {
     reservationImage.classList.add("show");
   });
 });
-    const overlay = document.createElement("div");
-    overlay.classList.add("image-overlay");
-    const overlayImg = document.createElement("img");
-    overlay.appendChild(overlayImg);
-    document.body.appendChild(overlay);
+    const reserveButton = document.querySelector('.table');
 
-    const closeBtn = document.createElement("button");
-        closeBtn.textContent = "x"; 
-        closeBtn.style.position = "absolute";
-        closeBtn.style.top = "8%";
-        closeBtn.style.right = "20%";
-        closeBtn.style.fontSize = "2rem";
-        closeBtn.style.fontFamily = "Montserrat";
-        closeBtn.style.color = "#000";
-        closeBtn.style.background = "transparent";
-        closeBtn.style.border = "none";
-        closeBtn.style.fontWeight = "bold";
-        closeBtn.style.cursor = "pointer";
-        closeBtn.style.zIndex = "1001"; 
-        overlay.appendChild(closeBtn);
+reserveButton.addEventListener('click', () => {
 
-    closeBtn.addEventListener("click", () => {
-        overlay.classList.remove("show");
+  const message = document.createElement('div');
+  message.textContent = "Reservation Confirmed!";
+  message.style.position = "fixed";
+  message.style.top = "50%";
+  message.style.left = "50%";
+  message.style.transform = "translate(-50%, -50%)";
+  message.style.background = "rgba(0, 0, 0, 0.8)";
+  message.style.color = "#fff";
+  message.style.padding = "1rem 2rem";
+  message.style.borderRadius = "10px";
+  message.style.fontFamily = "Playfair Display, serif";
+  message.style.fontSize = "1.5rem";
+  message.style.zIndex = "2000";
+  message.style.textAlign = "center";
+  
+  document.body.appendChild(message);
+
+  setTimeout(() => {
+    message.remove();
+  }, 2000);
 });
-
-    function openZoom() {
-        overlayImg.src = reservationImage.src;
-        overlay.classList.add("show");
-}
-    reservationImage.addEventListener("click", openZoom);
-    document.querySelector(".table").addEventListener("click", openZoom);
-
     </script>
 </body>
 </html>
+
 
 
 
