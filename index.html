@@ -177,15 +177,6 @@ html, body{
     color: #126468;
     text-decoration: underline;
 }
-.section-two{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: clamp(2rem, 5vw, 5rem);
-    padding: clamp(5rem, 10vw, 10rem);
-    background-color: #2B4257;
-}
 .logo-third img{
     width: clamp(200px, 35vw, 600px);
     height: auto;
@@ -211,7 +202,7 @@ html, body{
     content: "";
     display: inline-block;
     width: 10rem;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid #000000;
     margin: 0 20px;
 }
 .name-two{
@@ -281,6 +272,7 @@ html, body{
     padding: clamp(3rem, 10vw, 6rem) 2vw;
     width: 100%;
     position: relative;
+    z-index: 5;
 }
 .section-two{
     opacity: 0;
@@ -543,7 +535,6 @@ html, body{
     margin-left: 0.3rem;
     margin-right: 2rem;
 }
-
 .fifth-wrapper{
     background-color: #000;
     padding: 2rem;
@@ -614,7 +605,82 @@ html, body{
 .links-left .home{
     text-decoration: underline;
 }
-.middle {
+.about-text p{
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-size: 1.27rem;
+}
+.About{
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.About.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.name-two{
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.name-two.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.definition{
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    margin-top: 22rem;
+    font-weight: bold;
+}
+.definition.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.section-two{
+    gap: clamp(2rem, 5vw, 5rem);
+    padding: clamp(5rem, 10vw, 10rem);
+    background-color: #2B4257;
+    background-image: url('images/about-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 80vw;
+    height: 50vh;
+    padding-top: 17rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+.about-text{
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+}
+.top{
+    position: absolute;
+    top: 1rem;
+}
+.middle-container {
+    position: absolute;
+    top: calc(228vh - 50px); 
+    left: 0.1%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -2rem; 
+    z-index: 10; 
+}
+.middle-button {
     display: inline-block;
     background-color: #1D2731;
     color: #fff;
@@ -635,16 +701,16 @@ html, body{
     background-size: 200% 100%;
     background-position: right bottom;
 }
-.middle.show{
+.middle-button.show{
     opacity: 1;
     transform: translateX(0);
 }
-.middle:hover{
+.middle-button:hover{
     background-color: #4ac5cb;
     background-position: left bottom;
     color: #000;
 }
-.middle:active {
+.middle-button:active {
     transform: scale(0.95);
 }
     </style>
@@ -663,7 +729,7 @@ html, body{
             <div class="links-right">
                 <a href="#">Delivery</a>
                 <a href="#">Menu</a>
-                <a href="https://zeuxo.github.io/CS001-code/files/contact.html" class="contact">Contact</a>
+                <a href="https://zeuxo.github.io/CS001-code/files/contact.html">Contact</a>
             </div>
         </div>
         <div class="Background">
@@ -681,15 +747,21 @@ html, body{
         </div>        
     </div>
     <div class="section-two">
-        <div class="logo-third">
-            <img src="images/about-bg.png">
-        </div>
         <div class="about-text">
+        <div class="top">
             <div class="About"><span>About</span></div>
             <div class="name-two">Archipelago</div>
-            <button class="middle">Read More</button>
+        </div>
+            <p class="definition">A tribute to the hands that shape, the hearts <br>
+                that create, and the cultures that unite. 
+            </p>
         </div>
     </div>
+
+    <div class="middle-container">
+        <button class="middle-button">Read More</button>
+    </div>
+
     <div class="second-wrapper">
         <div class="section-three">
             <div class="logo-forth">
@@ -746,7 +818,7 @@ html, body{
                 </ul>
             </nav>
             <div class="nav-image">
-                <img src="images/Quezon.png">
+                <img src="C:\Users\Laptop Supplier PH\Downloads\Code\A - intro code\Quezon.png">
             </div>
             <div class="location-container">
                 <div class="location-info">
@@ -775,9 +847,9 @@ html, body{
               </div>
             </div>
           <div class="social-icons">
-            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
         </div>    
         <div class="locations">
             <ul>
@@ -801,7 +873,7 @@ html, body{
 }, {});
 
 const contentElements = document.querySelectorAll(
-  ".second-wrapper, .section-two, .top-row, .bottom-row, .wrapper, .Discover, .Menu, .fourth-div, .fifth-wrapper, .middle"
+  ".second-wrapper, .middle-button, .section-two, .top-row, .bottom-row, .wrapper, .Discover, .Menu, .fourth-div, .fifth-wrapper, .About, .name-two, .definition"
 );
 contentElements.forEach((el) => observer.observe(el));
 
@@ -865,16 +937,11 @@ navLinks.forEach((link) => {
   });
 });
       </script>
-    <script>
+      <script>
         const reserveButton = document.querySelector(".button");
         reserveButton.addEventListener("click", () => {
-          window.location.href = "https://zeuxo.github.io/CS001-code/files/reservation.html";
+          window.location.href = "reservation.html";
         });
       </script>
-    <script>
-  document.querySelector(".middle").addEventListener("click", () => {
-    window.location.href = "https://zeuxo.github.io/CS001-code/files/about.html"; 
-  });
-</script>
 </body>
 </html>
