@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archipelago</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archipelago</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Permanent+Marker&family=Roboto+Slab:wght@100..900&family=Rubik+Wet+Paint&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Rubik+Wet+Paint&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Rubik+Wet+Paint&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Baskervville+SC:wght@400..700&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Rubik+Wet+Paint&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-RXf+QSDCUq1z8mZ+..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Baskervville+SC:wght@400..700&family=Baskervville:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Rubik+Wet+Paint&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <style>
+        html{
+    background-color: #1D2731;
+}
+html, body{
+    overflow-x: hidden;
+}
+.links-left a, .links-right a{
+    color: #fff;
+    text-decoration: none;
+    font-family: "Baskervville", serif;
+    margin-top: 0.5rem;
+    display: inline-block;
+    padding: 0 1.5vw;
+}
+.links-left a{
+    padding-left: 5vw;
+}
+.links-right a{
+    padding: 1vw 3vw;
+}
+.logo{
+    margin-top: 1rem;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 1vw;
+}
+.links-left a:hover,
+.links-right a:hover{
+    color: #4ac5cb;
+    text-decoration: underline;
+}
+.links-left a:active,
+.links-right a:active{
+    color: #126468;
+    text-decoration: underline;
+}
+.links-right .menu{
+    text-decoration: underline;
+}
+.second-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; 
+    transition: 0.8s ease;
+}
+.second-wrapper.show{
+    opacity: 1;
+}
+.second-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('menu-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 1; 
+    z-index: 0;
+}
+.second-wrapper * {
+    position: relative;
+    z-index: 1; 
+}
+.Explore{
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    padding-top: 15rem;
+}
+.Explore::before,
+.Explore::after{
+    content: "";
+    display: inline-block;
+    width: clamp(5rem, 10vw, 10rem);
+    border-bottom: 2px solid #fff;
+    margin: 0 clamp(1vw, 2vw, 2rem);
+}
+.Entrees{
+    font-family: "Playfair Display", serif;
+    color: #fff;
+    font-size: clamp(2rem, 6vw, 10rem);
+}
+.menu-choices{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20rem;
+    margin-top: auto;
+    margin-bottom: 8vh;
+}
+.menu-choices a{
+    color: #fff;
+    text-decoration: none;
+    font-size: clamp(1rem, 5vw, 2.5rem);
+    font-weight: bold;
+}
+.second-wrapper .main{
+    text-decoration: underline;
+}
+.thailand{
+    background-image: url('thailand-bg.png');
+    border: none;
+    width: 100vw;
+    height: 50vh;
+    background-repeat: none;
+    background-size: cover;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: 0.8s ease;
+    font-size: clamp(2rem, 6vw, 10rem);
+}
+.thailand.show{
+    opacity: 1;
+    transform: scale(1);
+}
+.malaysia{
+    background-image: url('malaysia-bg.png');
+    border: none;
+    width: 100vw;
+    height: 50vh;
+    background-repeat: none;
+    background-size: cover;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: 0.8s ease;
+    font-size: clamp(2rem, 6vw, 10rem);
+}
+.malaysia.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.vietnam{
+    background-image: url('vietnam-bg.png');
+    border: none;
+    width: 100vw;
+    height: 50vh;
+    background-repeat: none;
+    background-size: cover;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: 0.8s ease;
+    font-size: clamp(2rem, 6vw, 10rem);
+}
+.vietnam.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.indo{
+    background-image: url('indonesia-bg.png');
+    border: none;
+    width: 100vw;
+    height: 50vh;
+    background-repeat: none;
+    background-size: cover;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: 0.8s ease;
+    font-size: clamp(2rem, 6vw, 10rem);
+}
+.indo.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.myanmar{
+    background-image: url('myanmar-bg.png');
+    border: none;
+    width: 100vw;
+    height: 50vh;
+    background-repeat: none;
+    background-size: cover;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: 0.8s ease;
+    font-size: clamp(2rem, 6vw, 10rem);
+}
+.myanmar.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.ph{
+    background-image: url('ph-bg.png');
+    border: none;
+    width: 100vw;
+    height: 50vh;
+    background-repeat: none;
+    background-size: cover;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: 0.8s ease;
+    font-size: clamp(2rem, 6vw, 10rem);
+}
+.ph.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.singapore{
+    background-image: url('singapore-bg.png');
+    border: none;
+    width: 100vw;
+    height: 50vh;
+    background-repeat: none;
+    background-size: cover;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: 0.8s ease;
+    font-size: clamp(2rem, 6vw, 10rem);
+}
+.singapore.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.brunei{
+    background-image: url('brunei-bg.png');
+    border: none;
+    width: 100vw;
+    height: 50vh;
+    background-repeat: none;
+    background-size: cover;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: 0.8s ease;
+    font-size: clamp(2rem, 6vw, 10rem);
+}
+.brunei.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.timor{
+    background-image: url('timor-bg.png');
+    border: none;
+    width: 100vw;
+    height: 50vh;
+    background-repeat: none;
+    background-size: cover;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: 0.8s ease;
+    font-size: clamp(2rem, 6vw, 10rem);
+}
+.timor.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.laos{
+    background-image: url('laos-bg.png');
+    border: none;
+    width: 100vw;
+    height: 50vh;
+    background-repeat: none;
+    background-size: cover;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: 0.8s ease;
+    font-size: clamp(2rem, 6vw, 10rem);
+}
+.laos.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.cambodia{
+    background-image: url('cambodia-bg.png');
+    border: none;
+    width: 100vw;
+    height: 50vh;
+    background-repeat: none;
+    background-size: cover;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: 0.8s ease;
+    font-size: clamp(2rem, 6vw, 10rem);
+}
+.cambodia.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.country-overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #1E1E1E;
+    color: white;
+    z-index: 999;
+    overflow-y: auto;
+    padding-top: 0;
+    box-sizing: border-box;
+}
+.Thailand-bg{
+    background-color: #2B4257;
+    height: 200px;
+    width: 100vw;
+    position: relative; 
+}
+.close{
+    position: absolute;
+    font-family: "Baskervville", serif;
+    top: 15px;
+    left: 20px;
+    color: #fff;
+    border: none;
+    background-color: transparent;
+    padding: 8px 14px;
+    font-size: clamp(1rem, 2vw, 3rem);
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1000;
+    font-weight: bold;
+}
+#thai-text{
+    font-family: "Playfair Display", serif;
+    color: #fff;
+    font-weight: bold;
+    font-size: clamp(3rem, 5vw, 5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+#thai-definition{
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    font-size: clamp(0.9rem, 1.5vw, 3rem);
+}
+.content{
+    font-family: "Barlow Semi Condensed", sans-serif;
+    max-width: 700px;
+    margin: 20px auto;
+    text-align: center;
+}
+.content p{
+    font-size: clamp(0.9rem, 1.5vw, 5rem);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.food-image{
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: 0 auto 2rem;
+    padding-bottom: 2rem;
+    display: block;
+}
+.Malaysia-bg{
+    background-color: #2B4257;
+    height: 200px;
+    width: 100vw;
+    position: relative; 
+}
+#malaysia-text{
+    font-family: "Playfair Display", serif;
+    color: #fff;
+    font-weight: bold;
+    font-size: clamp(3rem, 5vw, 5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+#malaysia-definition{
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    font-size: clamp(0.9rem, 1.5vw, 3rem);
+}
+.Vietnam-bg{
+    background-color: #2B4257;
+    height: 200px;
+    width: 100vw;
+    position: relative; 
+}
+#vietnam-text{
+    font-family: "Playfair Display", serif;
+    color: #fff;
+    font-weight: bold;
+    font-size: clamp(3rem, 5vw, 5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+#vietnam-definition{
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    font-size: clamp(0.9rem, 1.5vw, 3rem);
+}
+.Indonesia-bg{
+    background-color: #2B4257;
+    height: 200px;
+    width: 100vw;
+    position: relative; 
+}
+#indo-text{
+    font-family: "Playfair Display", serif;
+    color: #fff;
+    font-weight: bold;
+    font-size: clamp(3rem, 5vw, 5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+#indo-definition{
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    font-size: clamp(0.9rem, 1.5vw, 3rem);
+}
+.Singapore-bg{
+    background-color: #2B4257;
+    height: 200px;
+    width: 100vw;
+    position: relative; 
+}
+#singapore-text{
+    font-family: "Playfair Display", serif;
+    color: #fff;
+    font-weight: bold;
+    font-size: clamp(3rem, 5vw, 5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+#singapore-definition{
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    font-size: clamp(0.9rem, 1.5vw, 3rem);
+}
+.ph-bg{
+    background-color: #2B4257;
+    height: 200px;
+    width: 100vw;
+    position: relative; 
+}
+#ph-text{
+    font-family: "Playfair Display", serif;
+    color: #fff;
+    font-weight: bold;
+    font-size: clamp(3rem, 5vw, 5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+#ph-definition{
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    font-size: clamp(0.9rem, 1.5vw, 3rem);
+}
+.Myanmar-bg{
+    background-color: #2B4257;
+    height: 200px;
+    width: 100vw;
+    position: relative; 
+}
+#myanmar-text{
+    font-family: "Playfair Display", serif;
+    color: #fff;
+    font-weight: bold;
+    font-size: clamp(3rem, 5vw, 5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+#myanmar-definition{
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    font-size: clamp(0.9rem, 1.5vw, 3rem);
+}
+.Brunei-bg{
+    background-color: #2B4257;
+    height: 200px;
+    width: 100vw;
+    position: relative; 
+}
+#brunei-text{
+    font-family: "Playfair Display", serif;
+    color: #fff;
+    font-weight: bold;
+    font-size: clamp(3rem, 5vw, 5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+#brunei-definition{
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    font-size: clamp(0.9rem, 1.5vw, 3rem);
+}
+.Timor-bg{
+    background-color: #2B4257;
+    height: 200px;
+    width: 100vw;
+    position: relative; 
+}
+#timor-text{
+    font-family: "Playfair Display", serif;
+    color: #fff;
+    font-weight: bold;
+    font-size: clamp(3rem, 5vw, 5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+#timor-definition{
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    font-size: clamp(0.9rem, 1.5vw, 3rem);
+}
+.Laos-bg{
+    background-color: #2B4257;
+    height: 200px;
+    width: 100vw;
+    position: relative; 
+}
+#laos-text{
+    font-family: "Playfair Display", serif;
+    color: #fff;
+    font-weight: bold;
+    font-size: clamp(3rem, 5vw, 5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+#laos-definition{
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    font-size: clamp(0.9rem, 1.5vw, 3rem);
+}
+.Cambodia-bg{
+    background-color: #2B4257;
+    height: 200px;
+    width: 100vw;
+    position: relative; 
+}
+#cambodia-text{
+    font-family: "Playfair Display", serif;
+    color: #fff;
+    font-weight: bold;
+    font-size: clamp(3rem, 5vw, 5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+#cambodia-definition{
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    font-size: clamp(0.9rem, 1.5vw, 3rem);
+}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="links-left">
+                <a href="home.html" class="home">Home</a>
+                <a href="#" class="about">About</a>
+                <a href="reservation.html">Reservation</a>
+            </div>
+            <div class="logo">
+                <img src="C:\Users\Laptop Supplier PH\Downloads\Code\A - intro code\Logo.png">
+            </div>
+            <div class="links-right">
+                <a href="#">Delivery</a>
+                <a href="#" class="menu">Menu</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>    
+    </div>
+    <div class="second-wrapper">
+        <div class="Explore">Explore</div>
+        <div class="Entrees">Menu and Entrées</div>
+        <div class="menu-choices">
+            <a href="#" class="main">MAIN COURSE</a>
+            <a href="#" class="wine">WINE</a>
+            <a href="#" class="beverage">BEVERAGES</a>
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="thailand">THAILAND</button>
+        <button class="malaysia">MALAYSIA</button>
+        <button class="vietnam">VIETNAM</button>
+        <button class="indo">INDONESIA</button>
+        <button class="ph">PHILIPPINES</button>
+        <button class="singapore">SINGAPORE</button>
+        <button class="myanmar">MYANMAR</button>
+        <button class="brunei">BRUNEI</button>
+        <button class="timor">TIMOR-LESTE</button>
+        <button class="laos">LAOS</button>
+        <button class="cambodia">CAMBODIA</button>
+    </div>
+    <div class="country-overlay" id="thailand-overlay">
+        <div class="Thailand-bg">
+            <button class="close">X</button>
+            <div id="thai-text">Thailand</div>
+            <div id="thai-definition">The Land of Smiles</div>
+        </div>
+        <div class="content">
+            <p class="description">
+                Our menu is thoughtfully curated to honor the integrity of each dish and its<br>
+                regional origins. While we understand the importance of dietary preferences, <br>
+                we kindly note that modifications or allergy-specific requests cannot be <br>
+                accommodated. We appreciate your understanding as we strive to preserve<br>
+                the authenticity and balance of every creation.
+            </p>
+            <img src="thai-menu-1.png" class="food-image">
+            <img src="thai-menu-2.png" class="food-image">
+        </div>
+        </div>
+
+        <div class="country-overlay" id="malaysia-overlay">
+            <div class="Malaysia-bg">
+                <button class="close">X</button>
+                <div id="malaysia-text">Malaysia</div>
+                <div id="malaysia-definition">Golden Peninsula</div>
+            </div>
+            <div class="content">
+                <p class="description">
+                    Our menu is thoughtfully curated to honor the integrity of each dish and its<br>
+                    regional origins. While we understand the importance of dietary preferences, <br>
+                    we kindly note that modifications or allergy-specific requests cannot be <br>
+                    accommodated. We appreciate your understanding as we strive to preserve<br>
+                    the authenticity and balance of every creation.
+                </p>
+                <img src="malaysia-menu-1.png" class="food-image">
+                <img src="malaysia-menu-2.png" class="food-image">
+            </div>
+        </div>
+        <div class="country-overlay" id="vietnam-overlay">
+            <div class="Vietnam-bg">
+                <button class="close">X</button>
+                <div id="vietnam-text">Vietnam</div>
+                <div id="vietnam-definition">Land of Blue Dragon</div>
+            </div>
+            <div class="content">
+                <p class="description">
+                    Our menu is thoughtfully curated to honor the integrity of each dish and its<br>
+                    regional origins. While we understand the importance of dietary preferences, <br>
+                    we kindly note that modifications or allergy-specific requests cannot be <br>
+                    accommodated. We appreciate your understanding as we strive to preserve<br>
+                    the authenticity and balance of every creation.
+                </p>
+                <img src="vietnam-menu-1.png" class="food-image">
+                <img src="vietnam-menu-2.png" class="food-image">
+            </div>
+        </div>
+
+        <div class="country-overlay" id="indonesia-overlay">
+            <div class="Indonesia-bg">
+                <button class="close">X</button>
+                <div id="indo-text">Indonesia</div>
+                <div id="indo-definition">Equatorial Emerald</div>
+            </div>
+            <div class="content">
+                <p class="description">
+                    Our menu is thoughtfully curated to honor the integrity of each dish and its<br>
+                    regional origins. While we understand the importance of dietary preferences, <br>
+                    we kindly note that modifications or allergy-specific requests cannot be <br>
+                    accommodated. We appreciate your understanding as we strive to preserve<br>
+                    the authenticity and balance of every creation.
+                </p>
+                <img src="indonesia-menu-1.png" class="food-image">
+                <img src="indonesia-menu-2.png" class="food-image">
+            </div>
+            </div>
+            <div class="country-overlay" id="singapore-overlay">
+                <div class="Singapore-bg">
+                    <button class="close">X</button>
+                    <div id="singapore-text">Singapore</div>
+                    <div id="singapore-definition">Lion City</div>
+                </div>
+                <div class="content">
+                    <p class="description">
+                        Our menu is thoughtfully curated to honor the integrity of each dish and its<br>
+                        regional origins. While we understand the importance of dietary preferences, <br>
+                        we kindly note that modifications or allergy-specific requests cannot be <br>
+                        accommodated. We appreciate your understanding as we strive to preserve<br>
+                        the authenticity and balance of every creation.
+                    </p>
+                    <img src="singapore-menu-1.png" class="food-image">
+                    <img src="singapore-menu-2.png" class="food-image">
+                </div>
+            </div>
+            <div class="country-overlay" id="ph-overlay">
+                <div class="ph-bg">
+                    <button class="close">X</button>
+                    <div id="ph-text">Philippines</div>
+                    <div id="ph-definition">The Pearl of the Orient Seas</div>
+                </div>
+                <div class="content">
+                    <p class="description">
+                        Our menu is thoughtfully curated to honor the integrity of each dish and its<br>
+                        regional origins. While we understand the importance of dietary preferences, <br>
+                        we kindly note that modifications or allergy-specific requests cannot be <br>
+                        accommodated. We appreciate your understanding as we strive to preserve<br>
+                        the authenticity and balance of every creation.
+                    </p>
+                    <img src="ph-menu-1.png" class="food-image">
+                    <img src="ph-menu-2.png" class="food-image">
+                </div>
+            </div>
+            <div class="country-overlay" id="myanmar-overlay">
+                <div class="Myanmar-bg">
+                    <button class="close">X</button>
+                    <div id="myanmar-text">Myanmar</div>
+                    <div id="myanmar-definition">Land of the Golden Pagoda</div>
+                </div>
+                <div class="content">
+                    <p class="description">
+                        Our menu is thoughtfully curated to honor the integrity of each dish and its<br>
+                        regional origins. While we understand the importance of dietary preferences, <br>
+                        we kindly note that modifications or allergy-specific requests cannot be <br>
+                        accommodated. We appreciate your understanding as we strive to preserve<br>
+                        the authenticity and balance of every creation.
+                    </p>
+                    <img src="myanmar-menu-1.png" class="food-image">
+                    <img src="myanmar-menu-2.png" class="food-image">
+                </div>
+            </div>
+            <div class="country-overlay" id="brunei-overlay">
+                <div class="Brunei-bg">
+                    <button class="close">X</button>
+                    <div id="brunei-text">Brunei</div>
+                    <div id="brunei-definition">Land of Unexpected Treasures</div>
+                </div>
+                <div class="content">
+                    <p class="description">
+                        Our menu is thoughtfully curated to honor the integrity of each dish and its<br>
+                        regional origins. While we understand the importance of dietary preferences, <br>
+                        we kindly note that modifications or allergy-specific requests cannot be <br>
+                        accommodated. We appreciate your understanding as we strive to preserve<br>
+                        the authenticity and balance of every creation.
+                    </p>
+                    <img src="brunei-menu-1.png" class="food-image">
+                    <img src="brunei-menu-2.png" class="food-image">
+                </div>
+            </div>
+            <div class="country-overlay" id="timor-overlay">
+                <div class="Timor-bg">
+                    <button class="close">X</button>
+                    <div id="timor-text">Timor-Leste</div>
+                    <div id="timor-definition">The Rising Sun of the East</div>
+                </div>
+                <div class="content">
+                    <p class="description">
+                        Our menu is thoughtfully curated to honor the integrity of each dish and its<br>
+                        regional origins. While we understand the importance of dietary preferences, <br>
+                        we kindly note that modifications or allergy-specific requests cannot be <br>
+                        accommodated. We appreciate your understanding as we strive to preserve<br>
+                        the authenticity and balance of every creation.
+                    </p>
+                    <img src="timor-menu-1.png" class="food-image">
+                    <img src="timor-menu-2.png" class="food-image">
+                </div>
+            </div>
+            <div class="country-overlay" id="laos-overlay">
+                <div class="Laos-bg">
+                    <button class="close">X</button>
+                    <div id="laos-text">Laos</div>
+                    <div id="laos-definition">Land of a Million Elephants</div>
+                </div>
+                <div class="content">
+                    <p class="description">
+                        Our menu is thoughtfully curated to honor the integrity of each dish and its<br>
+                        regional origins. While we understand the importance of dietary preferences, <br>
+                        we kindly note that modifications or allergy-specific requests cannot be <br>
+                        accommodated. We appreciate your understanding as we strive to preserve<br>
+                        the authenticity and balance of every creation.
+                    </p>
+                    <img src="laos-menu-1.png" class="food-image">
+                    <img src="laos-menu-2.png" class="food-image">
+                </div>
+            </div>
+            <div class="country-overlay" id="cambodia-overlay">
+                <div class="Cambodia-bg">
+                    <button class="close">X</button>
+                    <div id="cambodia-text">Cambodia</div>
+                    <div id="cambodia-definition">Kingdom of Wonder</div>
+                </div>
+                <div class="content">
+                    <p class="description">
+                        Our menu is thoughtfully curated to honor the integrity of each dish and its<br>
+                        regional origins. While we understand the importance of dietary preferences, <br>
+                        we kindly note that modifications or allergy-specific requests cannot be <br>
+                        accommodated. We appreciate your understanding as we strive to preserve<br>
+                        the authenticity and balance of every creation.
+                    </p>
+                    <img src="cambodia-menu-1.png" class="food-image">
+                    <img src="cambodia-menu-2.png" class="food-image">
+                </div>
+            </div>
+      <script>
+        const thailandBtn = document.querySelector('.thailand');
+const thailandOverlay = document.querySelector('#thailand-overlay');
+const thailandClose = thailandOverlay.querySelector('.close');
+
+const malaysiaBtn = document.querySelector('.malaysia');
+const malaysiaOverlay = document.querySelector('#malaysia-overlay');
+const malaysiaClose = malaysiaOverlay.querySelector('.close');
+
+const vietnamBtn = document.querySelector('.vietnam');
+const vietnamOverlay = document.querySelector('#vietnam-overlay');
+const vietnamClose = vietnamOverlay.querySelector('.close');
+
+const indonesiaBtn = document.querySelector('.indo');
+const indonesiaOverlay = document.querySelector('#indonesia-overlay');
+const indonesiaClose = indonesiaOverlay.querySelector('.close');
+
+const singaporeBtn = document.querySelector('.singapore');
+const singaporeOverlay = document.querySelector('#singapore-overlay');
+const singaporeClose = singaporeOverlay.querySelector('.close');
+
+const phBtn = document.querySelector('.ph');
+const phOverlay = document.querySelector('#ph-overlay');
+const phClose = phOverlay.querySelector('.close');
+
+const myanmarBtn = document.querySelector('.myanmar');
+const myanmarOverlay = document.querySelector('#myanmar-overlay');
+const myanmarClose = myanmarOverlay.querySelector('.close');
+
+const bruneiBtn = document.querySelector('.brunei');
+const bruneiOverlay = document.querySelector('#brunei-overlay');
+const bruneiClose = bruneiOverlay.querySelector('.close');
+
+const timorBtn = document.querySelector('.timor');
+const timorOverlay = document.querySelector('#timor-overlay');
+const timorClose = timorOverlay.querySelector('.close');
+
+const laosBtn = document.querySelector('.laos');
+const laosOverlay = document.querySelector('#laos-overlay');
+const laosClose = laosOverlay.querySelector('.close');
+
+const cambodiaBtn = document.querySelector('.cambodia');
+const cambodiaOverlay = document.querySelector('#cambodia-overlay');
+const cambodiaClose = cambodiaOverlay.querySelector('.close');
+
+const buttonsContainer = document.querySelector('.buttons');
+
+thailandBtn.addEventListener('click', () => {
+  buttonsContainer.style.display = 'none';  
+  thailandOverlay.style.display = 'block';  
+});
+thailandClose.addEventListener('click', () => {
+  thailandOverlay.style.display = 'none'; 
+  buttonsContainer.style.display = 'block'; 
+});
+
+malaysiaBtn.addEventListener('click', () => {
+  buttonsContainer.style.display = 'none';  
+  malaysiaOverlay.style.display = 'block';  
+});
+malaysiaClose.addEventListener('click', () => {
+  malaysiaOverlay.style.display = 'none'; 
+  buttonsContainer.style.display = 'block'; 
+});
+
+vietnamBtn.addEventListener('click', () => {
+  buttonsContainer.style.display = 'none';  
+  vietnamOverlay.style.display = 'block';  
+});
+vietnamClose.addEventListener('click', () => {
+  vietnamOverlay.style.display = 'none'; 
+  buttonsContainer.style.display = 'block'; 
+});
+
+singaporeBtn.addEventListener('click', () => {
+  buttonsContainer.style.display = 'none';  
+  singaporeOverlay.style.display = 'block';  
+});
+singaporeClose.addEventListener('click', () => {
+  singaporeOverlay.style.display = 'none'; 
+  buttonsContainer.style.display = 'block'; 
+});
+
+indonesiaBtn.addEventListener('click', () => {
+  buttonsContainer.style.display = 'none';  
+  indonesiaOverlay.style.display = 'block';  
+});
+indonesiaClose.addEventListener('click', () => {
+  indonesiaOverlay.style.display = 'none'; 
+  buttonsContainer.style.display = 'block'; 
+});
+
+phBtn.addEventListener('click', () => {
+  buttonsContainer.style.display = 'none';  
+  phOverlay.style.display = 'block';  
+});
+phClose.addEventListener('click', () => {
+  phOverlay.style.display = 'none'; 
+  buttonsContainer.style.display = 'block'; 
+});
+
+myanmarBtn.addEventListener('click', () => {
+  buttonsContainer.style.display = 'none';  
+  myanmarOverlay.style.display = 'block';  
+});
+myanmarClose.addEventListener('click', () => {
+  myanmarOverlay.style.display = 'none'; 
+  buttonsContainer.style.display = 'block'; 
+});
+
+bruneiBtn.addEventListener('click', () => {
+  buttonsContainer.style.display = 'none';  
+  bruneiOverlay.style.display = 'block';  
+});
+bruneiClose.addEventListener('click', () => {
+  bruneiOverlay.style.display = 'none'; 
+  buttonsContainer.style.display = 'block'; 
+});
+
+timorBtn.addEventListener('click', () => {
+  buttonsContainer.style.display = 'none';  
+  timorOverlay.style.display = 'block';  
+});
+timorClose.addEventListener('click', () => {
+  timorOverlay.style.display = 'none'; 
+  buttonsContainer.style.display = 'block'; 
+});
+
+laosBtn.addEventListener('click', () => {
+  buttonsContainer.style.display = 'none';  
+  laosOverlay.style.display = 'block';  
+});
+laosClose.addEventListener('click', () => {
+  laosOverlay.style.display = 'none'; 
+  buttonsContainer.style.display = 'block'; 
+});
+
+cambodiaBtn.addEventListener('click', () => {
+  buttonsContainer.style.display = 'none';  
+  cambodiaOverlay.style.display = 'block';  
+});
+cambodiaClose.addEventListener('click', () => {
+  cambodiaOverlay.style.display = 'none'; 
+  buttonsContainer.style.display = 'block'; 
+});
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      console.log(entry.target);
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");
+    }
+  });
+}, {});
+
+const contentElements = document.querySelectorAll(
+  ".thailand, .malaysia, .vietnam, .indo, .ph, .singapore, .myanmar, .brunei, .timor, .laos, .cambodia"
+);
+contentElements.forEach((el) => observer.observe(el));
+      </script>
+</body>
+</html>
